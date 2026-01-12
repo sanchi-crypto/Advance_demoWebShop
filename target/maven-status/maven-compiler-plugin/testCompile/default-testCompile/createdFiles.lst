@@ -1,0 +1,10 @@
+api\requests\RegisterUserAPI.class
+api\payloads\RegisterPayload.class
+api\utils\ApiBase.class
+ui\base\DriverFactory.class
+runners\TestRunner.class
+stepdefinitions\E2ESteps.class
+utils\ConfigReader.class
+ui\base\BaseTest.class
+ui\pages\LoginPage.class
+api\responses\RegisterResponse.class
