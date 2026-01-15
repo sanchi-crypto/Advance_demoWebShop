@@ -1,5 +1,6 @@
 package api.requests;
-
+import static org.hamcrest.Matchers.anyOf;
+import static org.hamcrest.Matchers.is;
 import api.payloads.RegisterPayload;
 import api.utils.ApiBase;
 import io.restassured.RestAssured;
@@ -12,7 +13,7 @@ public class RegisterUserAPI {
 		payload.Password=password;
 		payload.ConfirmPassword=password;
 		RestAssured.given().contentType("application/json")
-		.body(payload).post("/register");
+		.body(payload).post("/register").then().statusCode(anyOf(is(200), is(302)));;
 	}
 
 }
